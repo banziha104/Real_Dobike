@@ -1,7 +1,7 @@
 package com.nicname.iyeongjun.dobike.di.activities
 
 import com.nicname.iyeongjun.dobike.di.activities.module.MainModule
-import com.nicname.iyeongjun.dobike.ui.main.main.MainActivity
+import com.nicname.iyeongjun.dobike.ui.activities.main.main.MainActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

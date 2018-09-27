@@ -4,6 +4,7 @@ import android.content.Context
 import com.nicname.iyeongjun.dobike.DobikeApplication
 import com.nicname.iyeongjun.dobike.di.activities.ActivityBinder
 import com.nicname.iyeongjun.dobike.di.global.ApiModule
+import com.nicname.iyeongjun.dobike.di.global.DriverModule
 import com.nicname.iyeongjun.dobike.di.global.NetworkModule
 import dagger.BindsInstance
 import dagger.Component
@@ -18,6 +19,7 @@ import javax.inject.Singleton
         AndroidSupportInjectionModule::class,
         NetworkModule::class,
         ApiModule::class,
+        DriverModule::class,
         ActivityBinder::class
         ))
 interface AppComponent : AndroidInjector<DobikeApplication> {

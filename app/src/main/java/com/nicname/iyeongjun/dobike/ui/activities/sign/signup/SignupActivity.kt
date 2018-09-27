@@ -1,4 +1,4 @@
-package com.nicname.iyeongjun.dobike.ui.sign.signup
+package com.nicname.iyeongjun.dobike.ui.activities.sign.signup
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
