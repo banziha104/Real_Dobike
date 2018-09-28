@@ -1,9 +1,9 @@
 package com.nicname.iyeongjun.dobike.di.global
 
 import android.location.Location
-import com.nicname.iyeongjun.dobike.adapter.recycler.inter.LocationApi
-import com.nicname.iyeongjun.dobike.adapter.recycler.inter.StorageApi
-import com.nicname.iyeongjun.dobike.adapter.recycler.inter.ThemeApi
+import com.nicname.iyeongjun.dobike.api.inter.LocationApi
+import com.nicname.iyeongjun.dobike.api.inter.StorageApi
+import com.nicname.iyeongjun.dobike.api.inter.ThemeApi
 import com.nicname.iyeongjun.dobike.const.API_URL
 import com.nicname.iyeongjun.dobike.const.SERVER_URL
 import com.nicname.iyeongjun.dobike.const.T_BASE_URL

@@ -1,8 +1,9 @@
 package com.nicname.iyeongjun.dobike.di.activities.module
 
-import com.nicname.iyeongjun.dobike.adapter.recycler.inter.LocationApi
-import com.nicname.iyeongjun.dobike.adapter.recycler.inter.StorageApi
-import com.nicname.iyeongjun.dobike.adapter.recycler.inter.ThemeApi
+import com.nicname.iyeongjun.dobike.api.inter.LocationApi
+import com.nicname.iyeongjun.dobike.api.inter.StorageApi
+import com.nicname.iyeongjun.dobike.api.inter.ThemeApi
+import com.nicname.iyeongjun.dobike.driver.DataDriver
 import com.nicname.iyeongjun.dobike.ui.activities.main.main.MainViewModelFactory
 import com.nicname.iyeongjun.gwangju_contest.api.inter.TourApi
 import com.nicname.iyeongjun.gwangju_contest.api.inter.WeatherApi
@@ -14,9 +15,5 @@ import dagger.Provides
 @Module
 class MainModule{
     @Provides
-    fun provideMainViewModelFactory(tourApi: TourApi,
-                                    weatherApi: WeatherApi,
-                                    storageApi: StorageApi,
-                                    locationApi: LocationApi,
-                                    themeApi: ThemeApi) = MainViewModelFactory(tourApi,weatherApi,storageApi,locationApi,themeApi)
+    fun provideMainViewModelFactory(driver: DataDriver, weatherApi: WeatherApi) = MainViewModelFactory(driver,weatherApi)
 }

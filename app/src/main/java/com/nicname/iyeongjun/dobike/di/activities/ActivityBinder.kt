@@ -1,7 +1,10 @@
 package com.nicname.iyeongjun.dobike.di.activities
 
+import android.app.Activity
 import com.nicname.iyeongjun.dobike.di.activities.module.MainModule
+import com.nicname.iyeongjun.dobike.di.activities.module.SplashModule
 import com.nicname.iyeongjun.dobike.ui.activities.main.main.MainActivity
+import com.nicname.iyeongjun.dobike.ui.activities.main.splash.SplashActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -12,4 +15,7 @@ abstract class ActivityBinder{
 
     @ContributesAndroidInjector(modules = arrayOf(MainModule::class))
     abstract fun bindMain() : MainActivity
+
+    @ContributesAndroidInjector(modules = arrayOf(SplashModule::class))
+    abstract fun bindSplashModule() : SplashActivity
 }
