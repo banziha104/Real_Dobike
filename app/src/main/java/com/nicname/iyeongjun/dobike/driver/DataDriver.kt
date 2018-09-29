@@ -8,6 +8,7 @@ import com.nicname.iyeongjun.dobike.api.model.tour.TourModel2
 import com.nicname.iyeongjun.dobike.api.model.weather.WeatherModel
 import io.reactivex.subjects.BehaviorSubject
 
+
 class DataDriver{
     val weatherDriver = BehaviorSubject.create<WeatherModel>()
     val forecastDriver = BehaviorSubject.create<ForecastModel>()
@@ -16,3 +17,4 @@ class DataDriver{
     val themeDriver = BehaviorSubject.create<ThemeModel>()
     val storageDriver = BehaviorSubject.create<StorageModel>()
 }
+
