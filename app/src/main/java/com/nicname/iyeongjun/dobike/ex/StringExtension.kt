@@ -6,8 +6,7 @@ import com.nicname.iyeongjun.dobike.R
 import org.json.XML
 fun String?.toIntViaDouble() = this?.toDouble()?.toInt()
 fun String.toIntViaDouble() = this.toDouble()?.toInt()
-
-
+fun String.getTag() : String = this.replace("$"," #").trim()
 
 fun String.getResource() : Int{
     var result : Int

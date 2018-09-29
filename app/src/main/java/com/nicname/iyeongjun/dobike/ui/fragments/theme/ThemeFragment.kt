@@ -1,20 +1,14 @@
 
 package com.nicname.iyeongjun.dobike.ui.fragments.theme
 
-import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProviders
-import android.content.Context
-import android.net.Uri
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
 import com.nicname.iyeongjun.dobike.R
 import com.nicname.iyeongjun.dobike.adapter.recycler.theme.ThemeAdapter
-import com.nicname.iyeongjun.gwangju_contest.extension.plusAssign
 import dagger.android.support.DaggerFragment
 import kotlinx.android.synthetic.main.fragment_theme.*
 import javax.inject.Inject

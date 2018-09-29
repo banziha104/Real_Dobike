@@ -1,6 +1,5 @@
 package com.nicname.iyeongjun.dobike.di.global
 
-import android.location.Location
 import com.nicname.iyeongjun.dobike.api.inter.LocationApi
 import com.nicname.iyeongjun.dobike.api.inter.StorageApi
 import com.nicname.iyeongjun.dobike.api.inter.ThemeApi

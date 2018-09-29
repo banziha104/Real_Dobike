@@ -7,9 +7,7 @@ import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.location.Location;
 import android.opengl.Matrix;
-import android.util.Log;
 import android.view.View;
-
 
 import com.nicname.iyeongjun.dobike.ar.helper.LocationHelper;
 import com.nicname.iyeongjun.dobike.ar.model.ARPoint;

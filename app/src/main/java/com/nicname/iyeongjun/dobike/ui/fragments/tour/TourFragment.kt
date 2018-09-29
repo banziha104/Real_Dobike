@@ -1,26 +1,19 @@
 package com.nicname.iyeongjun.dobike.ui.fragments.tour
 
 
-import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import com.jakewharton.rxbinding2.widget.RxAdapterView.itemSelections
-import com.jakewharton.rxbinding2.widget.itemClicks
 import com.jakewharton.rxbinding2.widget.itemSelections
-
 import com.nicname.iyeongjun.dobike.R
-import com.nicname.iyeongjun.dobike.R.id.*
 import com.nicname.iyeongjun.dobike.adapter.recycler.tour.TourAdapter
 import com.nicname.iyeongjun.dobike.api.model.section.Item
 import com.nicname.iyeongjun.dobike.const.sections
 import com.nicname.iyeongjun.gwangju_contest.extension.convertTypeToInt
-import com.nicname.iyeongjun.gwangju_contest.extension.plusAssign
 import dagger.android.support.DaggerFragment
 import io.reactivex.android.schedulers.AndroidSchedulers
 import kotlinx.android.synthetic.main.fragment_tour.*

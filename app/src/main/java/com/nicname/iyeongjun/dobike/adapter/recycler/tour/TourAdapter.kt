@@ -1,7 +1,6 @@
 package com.nicname.iyeongjun.dobike.adapter.recycler.tour
 
 import android.app.Activity
-import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.support.v7.widget.RecyclerView
@@ -12,10 +11,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.nicname.iyeongjun.dobike.GlideApp
 import com.nicname.iyeongjun.dobike.R
-import com.nicname.iyeongjun.dobike.api.model.tour.TourModel
 import com.nicname.iyeongjun.dobike.api.model.tour.TourModel2
 import com.nicname.iyeongjun.dobike.ui.dialog.TourDialog
-import com.nicname.iyeongjun.gwangju_contest.extension.convertType
 
 
 class TourAdapter(tourModel: TourModel2, val context : Activity) : RecyclerView.Adapter<TourAdapter.TourViewHolder>(){

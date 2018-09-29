@@ -1,7 +1,6 @@
 package com.nicname.iyeongjun.nanumcar.util
 
 import android.app.Activity
-import android.content.Context
 import com.kakao.kakaonavi.KakaoNaviParams
 import com.kakao.kakaonavi.KakaoNaviService
 import com.kakao.kakaonavi.Location

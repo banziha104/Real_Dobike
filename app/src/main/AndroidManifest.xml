@@ -21,18 +21,18 @@
             android:name="com.kakao.sdk.AppKey"
             android:value="@string/kakao_app_key" />
 
-        <activity android:name="com.nicname.iyeongjun.dobike.ui.activities.main.main.MainActivity">
-        </activity>
-        <activity android:name="com.nicname.iyeongjun.dobike.ui.activities.sign.signin.SigninActivity" />
-        <activity android:name="com.nicname.iyeongjun.dobike.ui.activities.sign.signup.SignupActivity" />
-        <activity android:name="com.nicname.iyeongjun.dobike.ui.activities.main.splash.SplashActivity">
+        <activity android:name=".ui.activities.main.main.MainActivity"></activity>
+        <activity android:name=".ui.activities.sign.signin.SigninActivity" />
+        <activity android:name=".ui.activities.sign.signup.SignupActivity" />
+        <activity android:name=".ui.activities.main.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="com.nicname.iyeongjun.dobike.ar.ARActivity"></activity>
+        <activity android:name=".ar.ARActivity" />
+        <activity android:name=".ui.activities.detail.DetailActivity"></activity>
     </application>
 
 </manifest>

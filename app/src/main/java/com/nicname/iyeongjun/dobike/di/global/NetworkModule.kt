@@ -1,15 +1,10 @@
 package com.nicname.iyeongjun.dobike.di.global
 
-import com.nicname.iyeongjun.dobike.const.API_URL
-import com.nicname.iyeongjun.dobike.const.T_BASE_URL
-import com.nicname.iyeongjun.gwangju_contest.api.inter.TourApi
-import com.nicname.iyeongjun.gwangju_contest.api.inter.WeatherApi
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
 import retrofit2.CallAdapter
 import retrofit2.Converter
-import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.simplexml.SimpleXmlConverterFactory

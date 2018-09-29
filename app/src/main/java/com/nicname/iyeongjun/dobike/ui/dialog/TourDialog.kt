@@ -12,7 +12,6 @@ import com.nicname.iyeongjun.dobike.api.model.tour.TourModel2
 import com.nicname.iyeongjun.dobike.ar.ARActivity
 import com.nicname.iyeongjun.dobike.ar.AROverlayView
 import com.nicname.iyeongjun.dobike.ar.model.ARPoint
-import com.nicname.iyeongjun.dobike.driver.ArData
 import com.nicname.iyeongjun.gwangju_contest.extension.convertType
 import com.nicname.iyeongjun.gwangju_contest.extension.getTourToDate
 import com.nicname.iyeongjun.nanumcar.util.KakaoNavi
