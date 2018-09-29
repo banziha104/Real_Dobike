@@ -1,7 +1,7 @@
 package com.nicname.iyeongjun.dobike.ui.activities.sign.signup
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import com.nicname.iyeongjun.dobike.R
 
 class SignupActivity : AppCompatActivity() {

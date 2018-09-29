@@ -2,8 +2,21 @@ package com.nicname.iyeongjun.gwangju_contest.extension
 
 import android.util.Log
 import com.google.gson.Gson
+import com.nicname.iyeongjun.dobike.R
 import org.json.XML
+fun String?.toIntViaDouble() = this?.toDouble()?.toInt()
+fun String.toIntViaDouble() = this.toDouble()?.toInt()
+fun String.getTag() : String = this.replace("$"," #").trim()
 
+fun String.getResource() : Int{
+    var result : Int
+    when(this){
+        "SKY_S01" -> result = R.drawable.weather_sunny
+        "SKY_S12" -> result = R.drawable.weather_rainy
+        else -> result = R.drawable.weather_cloudy
+    }
+    return result
+}
 
 fun String.getLimitedString( length: Int): String {
     var result = ""

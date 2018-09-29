@@ -4,7 +4,7 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-
+apply plugin: 'realm-android'
 
 android {
     compileSdkVersion 28
@@ -69,4 +69,5 @@ dependencies {
     implementation 'com.kakao.sdk:kakaonavi:1.12.0'
     implementation 'io.nlopez.smartlocation:rx:3.3.3'
     implementation 'com.yqritc:android-scalablevideoview:1.0.4'
+    implementation files('libs/com.skt.Tmap_1.52.jar')
 }
