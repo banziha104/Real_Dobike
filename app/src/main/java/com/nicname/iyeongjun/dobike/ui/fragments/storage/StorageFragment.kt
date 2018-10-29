@@ -14,9 +14,11 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import com.jakewharton.rxbinding2.widget.RxAdapterView.itemSelections
 import com.jakewharton.rxbinding2.widget.itemSelections
 
 import com.nicname.iyeongjun.dobike.R
+import com.nicname.iyeongjun.dobike.R.id.*
 import com.nicname.iyeongjun.dobike.api.model.storage.Result
 import com.nicname.iyeongjun.dobike.api.model.storage.StorageModel
 import com.nicname.iyeongjun.dobike.ar.ARActivity
@@ -42,6 +44,7 @@ class StorageFragment : DaggerFragment(), OnMapReadyCallback, AnkoLogger,GoogleM
     var googleMap : GoogleMap? = null
     var storageModel : StorageModel? = null
     var tempResult : Result? = null
+    var flag = false
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
@@ -71,11 +74,15 @@ class StorageFragment : DaggerFragment(), OnMapReadyCallback, AnkoLogger,GoogleM
         }
 
         btnSt.setOnClickListener {
-            AROverlayView.tempAR = ARPoint(tempResult?.title,
-                    tempResult?.lat!!,
-                    tempResult?.lon!!,
-                    0.0)
-            activity!!.startActivity<ARActivity>()
+            if(flag) {
+                AROverlayView.tempAR = ARPoint(tempResult?.title,
+                        tempResult?.lat!!,
+                        tempResult?.lon!!,
+                        0.0)
+                activity!!.startActivity<ARActivity>()
+            }else{
+                activity!!.toast("증강현실로 볼 지점을 선택해주십시오")
+            }
         }
         viewModel
                 .driver
@@ -103,6 +110,7 @@ class StorageFragment : DaggerFragment(), OnMapReadyCallback, AnkoLogger,GoogleM
     }
 
     override fun onMarkerClick(marker : Marker?): Boolean {
+        flag = true
         info { marker?.title }
         val temp = storageModel?.results?.filter { it.title == marker?.title }?.first()
 

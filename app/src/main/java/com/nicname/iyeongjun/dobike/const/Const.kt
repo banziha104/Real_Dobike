@@ -2,7 +2,7 @@ package com.nicname.iyeongjun.dobike.const
 
 // api 키
 
-const val T_KEY = "aa742873-f133-4407-bbfe-dbc480f36c6c"
+const val T_KEY = "cd99aff5-7c3a-4117-9772-75789b6f8f07"
 const val T_MAP_KEY = "0b16c80d-6ea8-4b4e-8fee-2b635e16115d"
 const val T_BASE_URL = "https://api2.sktelecom.com/"
 

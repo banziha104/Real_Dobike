@@ -26,6 +26,8 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "android.arch.persistence.room:runtime:$roomVersion"
+    kapt "android.arch.persistence.room:compiler:$roomVersion"
     implementation "com.android.support:multidex:$multidexVersion"
     implementation "android.arch.lifecycle:extensions:$archComponentVersion"
     implementation "com.android.support:appcompat-v7:$supportLibVersion"

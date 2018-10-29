@@ -21,7 +21,7 @@
             android:name="com.kakao.sdk.AppKey"
             android:value="@string/kakao_app_key" />
 
-        <activity android:name=".ui.activities.main.main.MainActivity"></activity>
+        <activity android:name=".ui.activities.main.main.MainActivity" />
         <activity android:name=".ui.activities.sign.signin.SigninActivity" />
         <activity android:name=".ui.activities.sign.signup.SignupActivity" />
         <activity android:name=".ui.activities.main.splash.SplashActivity">
@@ -32,7 +32,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".ar.ARActivity" />
-        <activity android:name=".ui.activities.detail.DetailActivity"></activity>
+        <activity android:name=".ui.activities.detail.DetailActivity" />
+
+        <service
+            android:name=".service.RideService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>
