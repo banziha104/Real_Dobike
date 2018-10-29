@@ -21,6 +21,7 @@ class WeatherFragment : DaggerFragment() {
     lateinit var viewModelFactory: WeatherViewModelFactory
     lateinit var viewModel : WeatherViewModel
 
+    var flag = false
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         viewModel = ViewModelProviders.of(this, viewModelFactory)[WeatherViewModel::class.java]
@@ -30,6 +31,10 @@ class WeatherFragment : DaggerFragment() {
 
     override fun onResume() {
         super.onResume()
+        if(flag == false){
+            activity!!.toast("GPS나 Network에 꺼져있는경우, 정확한 정보제공을 어려울수 있습니다.")
+            flag = true
+        }
             viewModel
                     .driver
                     .weatherDriver
@@ -44,7 +49,6 @@ class WeatherFragment : DaggerFragment() {
                         val location = item?.grid
                         txtWeatherTitle.text = "${location?.county}, ${location?.village}"
                     }, {
-                        activity!!.toast("GPS나 Network에 문제가 있습니다. 정확한 정보제공을 위해, GPS와 네트워크를 켜주세요")
                         it.printStackTrace()
                     })
             viewModel
@@ -75,7 +79,6 @@ class WeatherFragment : DaggerFragment() {
                         imgW12.setImageResource(sky.code13hour.getResource())
                         imgW15.setImageResource(sky.code16hour.getResource())
                     }, {
-                        activity!!.toast("GPS나 Network에 문제가 있습니다. 정확한 정보제공을 위해, GPS와 네트워크를 켜주세요")
                         it.printStackTrace()
                     })
 

@@ -13,6 +13,9 @@ import com.nicname.iyeongjun.dobike.R
 import com.nicname.iyeongjun.dobike.adapter.recycler.tour.TourAdapter
 import com.nicname.iyeongjun.dobike.api.model.section.Item
 import com.nicname.iyeongjun.dobike.const.sections
+import com.nicname.iyeongjun.dobike.ui.activities.detail.startLocation
+import com.nicname.iyeongjun.dobike.ui.activities.main.main.tempLocation
+import com.nicname.iyeongjun.dobike.ui.dialog.tourReDriver
 import com.nicname.iyeongjun.gwangju_contest.extension.convertTypeToInt
 import dagger.android.support.DaggerFragment
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -38,6 +41,8 @@ class TourFragment : DaggerFragment() , AnkoLogger{
 
     override fun onResume() {
         super.onResume()
+        tourReDriver.onNext(true)
+        startLocation = arrayOf(tempLocation[0], tempLocation[1])
         viewModel.tourApi
                 .getTourData(lat = temp?.lat.toDouble(),
                         lon = temp?.long.toDouble())

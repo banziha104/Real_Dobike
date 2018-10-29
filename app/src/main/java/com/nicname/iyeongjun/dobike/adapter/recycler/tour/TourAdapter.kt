@@ -43,7 +43,7 @@ class TourAdapter(tourModel: TourModel2, val context : Activity) : RecyclerView.
                 }else{
                     GlideApp
                             .with(context)
-                            .load(R.drawable.default_tour_img)
+                            .load(R.drawable.defalut_image_tour)
                             .into(img)
                 }
             }
